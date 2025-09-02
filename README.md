@@ -1,7 +1,7 @@
 # IOT-Class-AUPP-2025-Hun-Teng-Group4
 # 🌡️ ESP32 Telegram Temperature Bot with Relay Control
 
-This project connects an ESP32/ESP8266 with a **DHT11/DHT22 temperature sensor** and a **relay module**, controlled via a Telegram bot.  
+This project connects an ESP32 with a **DHT11/DHT22 temperature sensor** and a **relay module**, controlled via a Telegram bot.  
 It reads temperature, sends alerts, and lets you control the relay remotely from **Telegram chats or groups**.
 
 ---
