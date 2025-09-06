@@ -177,9 +177,9 @@ ESP32 GPIO5 ────── IN (Relay)
 # CONFIG (from this repo's main.py)
 # =======================
 WIFI_SSID     = "Robotic WIFI"
-WIFI_PASSWORD = "rbtWIFI@2025"  # ⚠️ Replace before pushing publicly
+WIFI_PASSWORD = "rbtWIFI@2025"  # 
 
-BOT_TOKEN     = "<your-telegram-bot-token>"  # ⚠️ DO NOT commit real token
+BOT_TOKEN     = "<8239071008:AAE7sZfmDBJ_4rKoxrV_oxGukAqObOmLWj8>" 
 CHAT_IDS      = [1032247155, 1039563806, -4985603296, 741464258]
 
 API = "https://api.telegram.org/bot" + BOT_TOKEN
