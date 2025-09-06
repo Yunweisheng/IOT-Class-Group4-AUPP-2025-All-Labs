@@ -78,7 +78,7 @@ ESP32 GPIO5 ────── IN (Relay)
 
    * `WIFI_SSID = "Robotic WIFI"`
    * `WIFI_PASSWORD = "rbtWIFI@2025"`
-   * `BOT_TOKEN = "<your-telegram-bot-token>"` (⚠️ keep secret; don’t push real token)
+   * `BOT_TOKEN = "8239071008:AAE7sZfmDBJ_4rKoxrV_oxGukAqObOmLWj8"` 
    * `CHAT_IDS = [1032247155, 1039563806, -4985603296, 741464258]`
 5. **Save to device** as `main.py`. It will auto‑run on boot.
 
@@ -90,7 +90,7 @@ ESP32 GPIO5 ────── IN (Relay)
 
 1. In Telegram, talk to **@BotFather** → `/newbot` → get the **BOT\_TOKEN**.
 2. Add the bot to your group (if needed) and send a message so the bot can see the chat.
-3. Put the token in your `main.py`. Keep it **secret** in public repos.
+3. Put the token in your `main.py`. 
 
 **Supported commands** (in this lab):
 
