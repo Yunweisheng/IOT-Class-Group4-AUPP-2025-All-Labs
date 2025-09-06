@@ -313,130 +313,13 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
   2. `/on` stops alerts
   3. Cooldown below **30 °C** → **auto-OFF** + one-time notice
 
----
 
-## Wiring Diagram (ASCII)
+## 🎥 Demo
 
-```text
-+-------------------+            +------------------+
-|      ESP32        |            |      DHT22       |
-|                   |            |                  |
-|      3V3 ---------+------------+ VCC              |
-|       GND --------+------------+ GND              |
-|    GPIO4 ---------+------------+ DATA             |
-|                   |            |                  |
-+-------------------+            +------------------+
-
-+-------------------+            +------------------+
-|      ESP32        |            |   RELAY MODULE   |
-|                   |            |                  |
-|      3V3 ---------+------------+ VCC / JD-VCC (*) |
-|       GND --------+------------+ GND              |
-|    GPIO5 ---------+------------+ IN               |
-|                   |            |                  |
-+-------------------+            +------------------+
-
-Notes:
-• DHT22: add a 10kΩ pull-up between DATA and VCC if your board doesn’t include one.
-• RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.
-• If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.
-
-## System Block Diagram
-   +---------+      Wi-Fi       +---------------------+       Telegram
-   |  ESP32  |<---------------->| Telegram Bot API    |<---- Chat / Group
-   |         |----------------->| (HTTP GET: sendMsg) |----> Messages
-   +----+----+      (HTTP)      +---------------------+
-        |
-        | GPIO4 (DHT22)     GPIO5 (Relay)
-        v                         v
-   +-----------+             +------------+
-   |  DHT22    |             |  Relay     |
-   | Temp/Hum  |             |  ON / OFF  |
-   +-----------+             +------------+
-
-Data/Control Flow:
-1) Periodic sensor read (5s) → evaluate thresholds/state
-2) Telegram poll (1s) → handle commands (/on, /off, /status, /temp)
-3) Alerting per LAB1 rules → send messages
-4) Auto-off armed on /on while hot → turn off when cooled
-## Main Loop Flowchart
-           ┌────────────────────────────────────────┐
-           │                START                   │
-           └───────────────┬────────────────────────┘
-                           v
-                 ┌────────────────────┐
-                 │ Connect to Wi-Fi   │
-                 └───────┬────────────┘
-                         v
-                 ┌────────────────────┐
-                 │ Init Relay OFF      │
-                 └───────┬────────────┘
-                         v
-               ┌────────────────────────┐
-               │ LOOP (runs forever)    │
-               └────────┬───────────────┘
-                        v
-       ┌─────────────────────────────────────────┐
-       │ Poll Telegram getUpdates (timeout=1s)   │
-       └───────────────┬─────────────────────────┘
-                       v
-            ┌───────────────────────────┐
-            │ Any new messages?         │───No──┐
-            └──────────────┬────────────┘       │
-                           v Yes                 │
-                 ┌────────────────────────────┐  │
-                 │ Handle command:            │  │
-                 │  /on → relay ON; if hot →  │  │
-                 │         auto_off_pending=1 │  │
-                 │  /off → relay OFF; clear   │  │
-                 │         auto_off_pending   │  │
-                 │  /status → show T/H/relay  │  │
-                 │  /temp → read & show T/H   │  │
-                 └────────────────────────────┘  │
-                                                v
-                       ┌─────────────────────────────────┐
-                       │ Every 5s: read DHT22 (T,H)      │
-                       └───────────────┬─────────────────┘
-                                       v
-                     ┌────────────────────────────────────────────┐
-                     │ Evaluate alerting (LAB1 rules):            │
-                     │  • T ≤ 30°C → no alerts                    │
-                     │  • First hot transition → one-time warning │
-                     │  • Relay OFF & hot → alert every 5s        │
-                     │  • Relay ON & hot → NO periodic reminders  │
-                     └───────────────┬────────────────────────────┘
-                                     v
-                     ┌────────────────────────────────────────────┐
-                     │ Auto-off check:                            │
-                     │  if auto_off_pending AND T ≤ 30°C:         │
-                     │     relay OFF; send one-time auto-OFF msg  │
-                     │     clear auto_off_pending                 │
-                     └───────────────┬────────────────────────────┘
-                                     v
-                           ┌────────────────────┐
-                           │ Small sleep (50ms) │
-                           └─────────┬──────────┘
-                                     │
-                                     └───────→ back to LOOP
-## Alerting & Auto-OFF State (Quick Reference)
-States:
-- NORMAL: T ≤ 30°C → no alerts
-- HOT_FIRST: T just crossed > 30°C → send one-time "Warning"
-- HOT_OFF: relay OFF & T > 30°C → alert every 5s
-- HOT_ON:  relay ON  & T > 30°C → suppress periodic reminders
-
-Auto-OFF:
-- When user sends /on while hot → auto_off_pending = 1
-- If later T ≤ 30°C → relay OFF + one-time "auto-OFF" notice; clear pending
+[![Watch the demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
 
 
----
 
-## 🎥 Demo Video
-
-Watch the short demonstration of the ESP32 Telegram Temperature Bot in action:
-
-[![ESP32 Telegram Bot Demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
 
 
 
