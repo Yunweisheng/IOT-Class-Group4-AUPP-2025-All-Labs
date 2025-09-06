@@ -329,12 +329,12 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 
 
 **Wiring Photo**
-[![Wiring Photo](images/wiring_photo.jpg)](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/a34131b89e13b9c06b3f229aef61f1a2a506a086/2025-09-06%2020.21.44.jpg)
-
 
 
 **Telegram Commands Test**
-![Telegram Commands](images/2025-09-06_20-21-44.jpg)
+[![Wiring Photo](images/wiring_photo.jpg)](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/a34131b89e13b9c06b3f229aef61f1a2a506a086/2025-09-06%2020.21.44.jpg)
+
+
 
 
 
