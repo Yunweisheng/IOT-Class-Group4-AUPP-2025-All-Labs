@@ -335,7 +335,8 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 ![Serial Logs](images/serial_readings.png)
 
 **Telegram Commands Test**
-![Telegram Commands](images/commands.png)
+![Telegram Commands](images/2025-09-06_20-21-44.jpg)
+
 
 **Alert Behavior**
 ![High Temp Alerts](images/test_message.png)
