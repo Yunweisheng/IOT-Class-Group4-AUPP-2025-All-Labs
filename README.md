@@ -400,7 +400,7 @@ Auto-OFF:
 - If later T ≤ 30°C → relay OFF + one-time "auto-OFF"
 
 
-  ## Wiring Diagram (ASCII)
+  ## Wiring Diagram 
 
 ```text
 +-------------------+            +------------------+
