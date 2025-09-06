@@ -430,20 +430,13 @@ Auto-OFF:
 - If later T ≤ 30°C → relay OFF + one-time "auto-OFF" notice; clear pending
 
 
-### 📹 Demo Video
-
-[![ESP32 Telegram Bot Demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
-
-*(Click the thumbnail to watch the video)*
-
 ---
 
-🖼️ Images
+## 🎥 Demo Video
 
+Watch the short demonstration of the ESP32 Telegram Temperature Bot in action:
 
-![Wiring Photo](images/wiring_photo.jpg)
-![Telegram Commands Test](images/telegram_commands.jpg)
-
+[![ESP32 Telegram Bot Demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
 
 
 
