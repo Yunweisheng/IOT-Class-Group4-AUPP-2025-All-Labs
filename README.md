@@ -325,7 +325,7 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 ## Wire Setup
 [image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/6502552b7a7e12080a1c5d0d4b0abd52123ee235/2025-09-06%2020.33.41.jpg)
 
- Wiring Diagram (ASCII)
+ #Wiring Diagram (ASCII)
 text
 +-------------------+            +------------------+
 |      ESP32        |            |      DHT22       |
