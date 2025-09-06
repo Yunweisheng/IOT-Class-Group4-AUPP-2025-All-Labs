@@ -325,19 +325,6 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 ## Wire Setup
 [image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/6502552b7a7e12080a1c5d0d4b0abd52123ee235/2025-09-06%2020.33.41.jpg)
 
-###System Block Diagram
-
-   +---------+      Wi-Fi       +---------------------+       Telegram
-   |  ESP32  |<---------------->| Telegram Bot API    |<---- Chat / Group
-   |         |----------------->| (HTTP GET: sendMsg) |----> Messages
-   +----+----+      (HTTP)      +---------------------+
-        |
-        | GPIO4 (DHT22)     GPIO5 (Relay)
-        v                         v
-   +-----------+             +------------+
-   |  DHT22    |             |  Relay     |
-   | Temp/Hum  |             |  ON / OFF  |
-   +-----------+             +------------+
 
 
 
