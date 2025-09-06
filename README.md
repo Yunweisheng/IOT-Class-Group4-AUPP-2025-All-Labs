@@ -324,13 +324,6 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 [image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/6502552b7a7e12080a1c5d0d4b0abd52123ee235/2025-09-06%2020.21.44.jpg)
 ## Wire Setup
 [image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/6502552b7a7e12080a1c5d0d4b0abd52123ee235/2025-09-06%2020.33.41.jpg)
-###Wiring Diagram (ASCII)
-
-
-Notes:
-• DHT22: add a 10kΩ pull-up between DATA and VCC if your board doesn’t include one.
-• RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.
-• If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.
 
 ## System Block Diagram
    +---------+      Wi-Fi       +---------------------+       Telegram
@@ -418,7 +411,35 @@ States:
 
 Auto-OFF:
 - When user sends /on while hot → auto_off_pending = 1
-- If later T ≤ 30°C → relay OFF + one-time "auto-OFF" n
+- If later T ≤ 30°C → relay OFF + one-time "auto-OFF"
+
+
+  ## Wiring Diagram (ASCII)
+
+```text
++-------------------+            +------------------+
+|      ESP32        |            |      DHT22       |
+|                   |            |                  |
+|      3V3 ---------+------------+ VCC              |
+|       GND --------+------------+ GND              |
+|    GPIO4 ---------+------------+ DATA             |
+|                   |            |                  |
++-------------------+            +------------------+
+
++-------------------+            +------------------+
+|      ESP32        |            |   RELAY MODULE   |
+|                   |            |                  |
+|      3V3 ---------+------------+ VCC / JD-VCC (*) |
+|       GND --------+------------+ GND              |
+|    GPIO5 ---------+------------+ IN               |
+|                   |            |                  |
++-------------------+            +------------------+
+
+Notes:
+• DHT22: add a 10kΩ pull-up between DATA and VCC if your board doesn’t include one.  
+• RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.  
+• If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.  
+
 
 
 
