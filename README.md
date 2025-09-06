@@ -326,13 +326,6 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 [image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/6502552b7a7e12080a1c5d0d4b0abd52123ee235/2025-09-06%2020.33.41.jpg)
 
 
-
-
-Data/Control Flow:
-1) Periodic sensor read (5s) → evaluate thresholds/state
-2) Telegram poll (1s) → handle commands (/on, /off, /status, /temp)
-3) Alerting per LAB1 rules → send messages
-4) Auto-off armed on /on while hot → turn off when cooled
 ## Main Loop Flowchart
            ┌────────────────────────────────────────┐
            │                START                   │
