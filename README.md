@@ -300,8 +300,6 @@ Use this **self‑check** to make sure you’ve met every rubric item. *The curr
 * Keep sensor/ESP32 away from high‑voltage wiring.
 * Never touch mains when powered; disconnect before rewiring.
 
----
-
 ## 15) Submission (Academic Integrity)
 
 Create a **private GitHub repo** and add the instructor as a collaborator. Include:
@@ -311,6 +309,35 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 * `/images/` → screenshots: serial readings, command tests, alert behavior
 * **Short demo video link** (e.g., unlisted YouTube/Drive) showing:
 
-  1. T rising above **30 °C** with alerts
+  1. T rising above **30 °C** with alerts
   2. `/on` stops alerts
-  3. Cooldown below **30 °C** → **auto‑OFF** + one‑time notice
+  3. Cooldown below **30 °C** → **auto-OFF** + one-time notice
+
+---
+
+### 📹 Demo Video
+
+[![ESP32 Telegram Bot Demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
+
+*(Click the thumbnail to watch the video)*
+
+---
+
+### 🖼️ Images
+
+**Wiring Diagram**
+![Wiring Diagram](images/esp32_dht_relay_schem.png)
+
+**Wiring Photo**
+![Wiring Photo](images/wiring_photo.jpg)
+
+**Serial Readings**
+![Serial Logs](images/serial_readings.png)
+
+**Telegram Commands Test**
+![Telegram Commands](images/commands.png)
+
+**Alert Behavior**
+![High Temp Alerts](images/test_message.png)
+
+
