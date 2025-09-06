@@ -441,14 +441,8 @@ Auto-OFF:
 🖼️ Images
 
 
-**Wiring Photo**
-
-![Wiring Photo](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/raw/191997ea2783ffb7b552bda35d664278318262f6/2025-09-06%2020.33.41.jpg)
-
-
-
-**Telegram Commands Test**
-![image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/5fd3b4cfa19bd221a19df1c720b885735f8088c1/2025-09-06%2020.21.44.jpg)
+![Wiring Photo](images/wiring_photo.jpg)
+![Telegram Commands Test](images/telegram_commands.jpg)
 
 
 
