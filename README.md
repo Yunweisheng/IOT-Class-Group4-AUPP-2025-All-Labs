@@ -315,6 +315,9 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 
 ---
 ## Wiring Diagram 
+### Wiring Diagram (ASCII)
+
+```text
 +-------------------+            +------------------+
 |      ESP32        |            |      DHT22       |
 |                   |            |                  |
