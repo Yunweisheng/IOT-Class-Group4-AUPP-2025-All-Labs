@@ -350,7 +350,7 @@ Notes:
 • RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.
 • If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.
 
-## System Block Diagram
+###System Block Diagram
    +---------+      Wi-Fi       +---------------------+       Telegram
    |  ESP32  |<---------------->| Telegram Bot API    |<---- Chat / Group
    |         |----------------->| (HTTP GET: sendMsg) |----> Messages
@@ -427,7 +427,7 @@ Data/Control Flow:
                            └─────────┬──────────┘
                                      │
                                      └───────→ back to LOOP
-## Alerting & Auto-OFF State (Quick Reference)
+###Alerting & Auto-OFF State (Quick Reference)
 States:
 - NORMAL: T ≤ 30°C → no alerts
 - HOT_FIRST: T just crossed > 30°C → send one-time "Warning"
