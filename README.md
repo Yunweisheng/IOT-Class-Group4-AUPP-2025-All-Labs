@@ -326,19 +326,17 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 ### 🖼️ Images
 
 **Wiring Diagram**
-![Wiring Diagram](images/esp32_dht_relay_schem.png)
+
 
 **Wiring Photo**
-![Wiring Photo](images/wiring_photo.jpg)
+[![Wiring Photo](images/wiring_photo.jpg)](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/a34131b89e13b9c06b3f229aef61f1a2a506a086/2025-09-06%2020.21.44.jpg)
 
-**Serial Readings**
-![Serial Logs](images/serial_readings.png)
+
 
 **Telegram Commands Test**
 ![Telegram Commands](images/2025-09-06_20-21-44.jpg)
 
 
-**Alert Behavior**
-![High Temp Alerts](images/test_message.png)
+
 
 
