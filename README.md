@@ -318,6 +318,7 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
 
 ### Video
 [![Watch the demo](https://img.youtube.com/vi/UzbG9PChk_c/0.jpg)](https://youtu.be/UzbG9PChk_c?si=t1REvn6xUxy5IgRf)
+*(Click the thumbnail to watch the video)*
 
 ### Image
 ## Telegram Chat 
