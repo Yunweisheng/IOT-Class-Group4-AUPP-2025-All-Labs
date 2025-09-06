@@ -314,8 +314,8 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
   3. Cooldown below **30 °C** → **auto-OFF** + one-time notice
 
 ---
-## Wiring Diagram 
-### Wiring Diagram (ASCII)
+
+## Wiring Diagram (ASCII)
 
 ```text
 +-------------------+            +------------------+
@@ -438,7 +438,7 @@ Auto-OFF:
 
 ---
 
-### 🖼️ Images
+🖼️ Images
 
 
 **Wiring Photo**
