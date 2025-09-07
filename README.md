@@ -65,8 +65,7 @@ ESP32 GPIO5 ────── IN (Relay)
 
 **Photo/Diagram placeholders** *(replace these with your own images)*:
 
-# Wiring
-[image
+
   
 
 ---
