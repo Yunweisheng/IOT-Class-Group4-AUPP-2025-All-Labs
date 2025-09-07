@@ -64,8 +64,8 @@ ESP32 GPIO5 ────── IN (Relay)
 
 **Photo/Diagram placeholders** *(replace these with your own images)*:
 
-* `images/wiring_photo.jpg`
-* `images/esp32_dht_relay_schem.png`
+* 
+  
 
 ---
 
