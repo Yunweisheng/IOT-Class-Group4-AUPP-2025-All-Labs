@@ -436,8 +436,7 @@ Notes:
 • RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.  
 • If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.  
 
-
-
+# FLOWCHART
 
 
 
