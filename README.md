@@ -398,6 +398,11 @@ Create a **private GitHub repo** and add the instructor as a collaborator. Inclu
                            └─────────┬──────────┘
                                      │
                                      └───────→ back to LOOP
+
+# FLOWCHART
+![](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/8594585e94e492daa9e5ecc0645beabd9baab30f/FlowchartIOT.png)
+
+                                     
 ## Alerting & Auto-OFF State (Quick Reference)
 States:
 - NORMAL: T ≤ 30°C → no alerts
@@ -436,8 +441,6 @@ Notes:
 • RELAY: connect the relay’s COM/NO to your external load circuit; keep mains isolation.  
 • If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.  
 
-# FLOWCHART
-![](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/8594585e94e492daa9e5ecc0645beabd9baab30f/FlowchartIOT.png)
 
 
 
