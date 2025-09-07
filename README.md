@@ -437,6 +437,7 @@ Notes:
 • If your relay logic is inverted, set RELAY_ACTIVE_LOW = True in the code.  
 
 # FLOWCHART
+![](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/8594585e94e492daa9e5ecc0645beabd9baab30f/FlowchartIOT.png)
 
 
 
