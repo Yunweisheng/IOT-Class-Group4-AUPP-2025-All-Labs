@@ -40,7 +40,7 @@ Build a tiny IoT node that reads temperature & humidity from a DHT sensor and co
 ---
 
 ## 4) Wiring
-[image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/adbf964f665646d409eff3ef05d750807c5c5bd0/IMAGE%202025-09-07%2018%3A12%3A16.jpg)
+
 
 **Default pins in code**:
 
@@ -63,8 +63,8 @@ ESP32 GPIO5 ────── IN (Relay)
 * If your relay board needs **5 V**, power VCC from 5 V. Most logic inputs still accept 3.3 V, but check your module specs.
 * If you switch **AC mains** with the relay, **isolate** the low‑voltage side, use proper enclosures, and follow electrical safety rules.
 
-**Photo/Diagram placeholders** *(replace these with your own images)*:
-
+**Photo/Diagram placeholders** 
+*[image alt](https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4/blob/adbf964f665646d409eff3ef05d750807c5c5bd0/IMAGE%202025-09-07%2018%3A12%3A16.jpg)*
 
   
 
