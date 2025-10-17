@@ -1,131 +1,89 @@
-# LAB2: IoT Webserver with LED, Sensors, and LCD Control
+# 🌡️ BMP280 Sensor with ESP32 (MicroPython + MQTT + ThingsBoard)
 
-## 1) Overview
-ESP32 + MicroPython project with a browser-based UI to:
-- Toggle an **LED**
-- Read **DHT11** (temperature/humidity) + **HC-SR04** (distance)
-- Show selected sensor values on a **16×2 I²C LCD**
-- Send **custom text** from the webpage to the LCD
+![BMP280 Sensor Connection](image/connection.png)
 
-Focus: event-driven interaction between web UI and hardware.
+The **BMP280** is a **digital barometric pressure and temperature sensor** designed by **Bosch Sensortec**.  
+It provides accurate readings of **atmospheric pressure**, **temperature**, and can estimate **altitude** — making it perfect for **weather stations**, **drones**, **IoT monitoring systems**, and **environmental projects**.
 
 ---
 
-## 2) Learning Outcomes
-- Build a MicroPython **webserver** with HTML controls
-- Control an **LED** from the browser
-- Read **DHT11** + **ultrasonic** and show on a webpage
-- Send sensor values to **LCD** via buttons
-- Send **custom text** (textbox → LCD)
-- Document wiring and usage clearly
+## 🧭 Overview
+
+The **BMP280** sensor provides high-resolution and low-power environmental data.  
+It communicates via **I²C** or **SPI**, making it easy to integrate with **ESP32**, **ESP8266**, and **Arduino** boards.
+
+| Feature | Description |
+|----------|--------------|
+| **Pressure Range** | 300 – 1100 hPa |
+| **Temperature Range** | –40 °C to +85 °C |
+| **Accuracy** | ±1 hPa (≈ ±8 m altitude) |
+| **Operating Voltage** | 1.8 V – 3.6 V (3.3 V typical) |
+| **Communication** | I²C or SPI |
+| **Power Consumption** | Ultra-low, ideal for IoT |
 
 ---
 
-## 3) Equipment
-- ESP32 Dev Board (with MicroPython)
-- DHT11 sensor
-- HC-SR04 ultrasonic sensor
-- 16×2 LCD with **I²C** backpack
-- Breadboard, jumper wires, USB cable
-- Laptop with **Thonny**
-- Wi-Fi access
+## 🧠 How It Works
 
----
-## 4) Wiring
-<p align="center">
-  <img src="https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4-LAB2/blob/main/2025-09-20%2000.00.32.jpg?raw=true" alt="Photo 1" width="32%">
-  <img src="https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4-LAB2/blob/main/2025-09-20%2000.00.37.jpg?raw=true" alt="Photo 2" width="32%">
-  <img src="https://github.com/Yunweisheng/IOT-Class-AUPP-2025-Hun-Teng-Group4-LAB2/blob/main/2025-09-20%2000.00.32.jpg?raw=true" alt="Photo 3" width="32%">
-</p>
-
-## 5) Tasks & Checkpoints
-### ✅ Task 1 — LED Control (15 pts)
-**Goal**
-- Add two buttons (**ON / OFF**) on the web page.
-- Clicking them should toggle the LED on **GPIO2**.
-
-**How to verify**
-- Click **LED ON** → LED turns on.
-- Click **LED OFF** → LED turns off.
-
-**Evidence to include in repo**
-- Short video showing button click → LED changes  
-  [![Watch the demo](https://img.youtube.com/vi/aZOX2eOIado/hqdefault.jpg)](https://youtu.be/aZOX2eOIado)
-
-- (Optional) Screenshot of the web page with ON/OFF buttons  
-  
-
-### ✅ Task 2 — Sensor Read (15 pts)
-**Goal**
-- Read **DHT11** temperature (and humidity if shown) and **HC-SR04** distance.
-- Display values on the web page, **auto-refresh every 1–2 seconds**.
-
-**How to verify**
-- Open the web page; confirm values update periodically without manual refresh.
-
-**Evidence to include in repo**
-- Screenshot of the web page with sensor values  
-  - Place at: 
-
-**Status**
-- [ ] Sensors wired & read correctly
-- [ ] Auto-refresh implemented (~1–2s)
-- [ ] Evidence added
+The BMP280 measures **absolute atmospheric pressure** using a piezo-resistive sensor.  
+It also measures **temperature**, and with these values, it can estimate **altitude** using the **barometric formula**.
 
 ---
 
-### ✅ Task 3 — Sensor → LCD (20 pts)
-**Goal**
-- Add two buttons on the web UI:
-  - **Show Distance** → writes distance to **LCD line 1**
-  - **Show Temp** → writes temperature to **LCD line 2**
+## 🧩 Applications
 
-**How to verify**
-- Click **Show Distance** → LCD line 1 shows current distance.
-- Click **Show Temp** → LCD line 2 shows current temperature.
-
-**Evidence to include in repo**
-- Photo of LCD showing distance after button click  
-  - Place at: `docs/images/lcd_distance.jpg`
-- Photo of LCD showing temperature after button click  
-  - Place at: `docs/images/lcd_temp.jpg`
-
-**Status**
-- [ ] Buttons added
-- [ ] Distance → LCD line 1
-- [ ] Temp → LCD line 2
-- [ ] Evidence added
+- 🌤️ Weather monitoring systems  
+- 🚁 Drone altitude tracking  
+- 🏕️ Outdoor environmental sensing  
+- 🏠 Smart home & IoT dashboards  
+- 🧪 Educational sensor experiments  
 
 ---
 
-### ✅ Task 4 — Textbox → LCD (20 pts)
-**Goal**
-- Add a **textbox + “Send”** button on the web page.
-- Sending text should display it on the LCD (**scroll/trim if >16 chars**).
+## 🔌 Pinout (I²C Mode)
 
-**How to verify**
-- Type custom text in the browser → press **Send** → text appears on LCD.
+| BMP280 Pin | Description | ESP32 Pin |
+|-------------|-------------|------------|
+| **VCC** | Power supply | 3.3 V |
+| **GND** | Ground | GND |
+| **SCL** | Serial clock | GPIO 22 |
+| **SDA** | Serial data | GPIO 21 |
 
-**Evidence to include in repo**
-- Short video of typing in browser → LCD displays the text  
-  - Place at: `docs/custom_text.mp4` 
-
-**Status**
-- [ ] Textbox & Send button added
-- [ ] Text reaches LCD (handles >16 chars)
-- [ ] Evidence added
+> ⚠️ Some BMP280 modules (e.g., **GY-BMP280**) include a voltage regulator and can accept **5 V**,  
+> but the original Bosch BMP280 chip only supports **3.3 V** logic.
 
 ---
 
-### ✅ Task 5 — Documentation (30 pts)
-**Goal**
-- Provide clear documentation for setup and usage.
+## 🧰 Requirements
 
-**README must include**
-- [ ] **Wiring diagram/photo** (e.g., `docs/images/wiring.jpg`)
-- [ ] **Setup instructions** (Wi-Fi, running server)
-- [ ] **Usage instructions** (LED control, sensor buttons, textbox → LCD)
-- [ ] **Evidence**: source code, screenshots, and demo video
+### Hardware
+- ESP32 or ESP8266 board  
+- BMP280 sensor module  
+- Jumper wires  
 
+### Software
+- [Thonny IDE](https://thonny.org/)  
+- MicroPython firmware installed on ESP32  
+- `bmp280.py` driver file uploaded to the board (from **Lab 3**)  
 
+---
+
+## 💻 MicroPython Example Code
+
+```python
+from machine import Pin, I2C
+from bmp280 import BMP280
+import time
+
+i2c = I2C(0, scl=Pin(22), sda=Pin(21))
+bmp = BMP280(i2c, addr=0x76)
+
+while True:
+    print("Temperature (°C):", bmp.temperature)
+    print("Pressure (hPa):", bmp.pressure / 100)
+    print("Altitude (m):", bmp.altitude)
+    print("------------------")
+    time.sleep(2)
+**Demo Video:** 
+[![Watch the demo](https://img.youtube.com/vi/g9yW_Zg92-Y/maxresdefault.jpg)](https://youtu.be/g9yW_Zg92-Y?si=r7X57VbUc5g3z5-h)
 
