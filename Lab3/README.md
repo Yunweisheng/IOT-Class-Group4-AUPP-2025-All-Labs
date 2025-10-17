@@ -1,6 +1,6 @@
 # 🌡️ BMP280 Sensor with ESP32 (MicroPython + MQTT + ThingsBoard)
 
-![BMP280 Sensor Connection](image/connection.png)
+![BMP280 Sensor Connection]
 
 The **BMP280** is a **digital barometric pressure and temperature sensor** designed by **Bosch Sensortec**.  
 It provides accurate readings of **atmospheric pressure**, **temperature**, and can estimate **altitude** — making it perfect for **weather stations**, **drones**, **IoT monitoring systems**, and **environmental projects**.
@@ -67,7 +67,7 @@ It also measures **temperature**, and with these values, it can estimate **altit
 - `bmp280.py` driver file uploaded to the board (from **Lab 3**)  
 
 ---
-**Demo Video:** 
+###Demo Video:
 [![Watch the demo](https://img.youtube.com/vi/g9yW_Zg92-Y/maxresdefault.jpg)](https://youtu.be/g9yW_Zg92-Y?si=r7X57VbUc5g3z5-h)
 ## 💻 MicroPython Example Code
 
