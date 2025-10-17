@@ -67,8 +67,12 @@ It also measures **temperature**, and with these values, it can estimate **altit
 - `bmp280.py` driver file uploaded to the board (from **Lab 3**)  
 
 ---
-###Demo Video:
+## 📺 Demo Video
+
 [![Watch the demo](https://img.youtube.com/vi/g9yW_Zg92-Y/maxresdefault.jpg)](https://youtu.be/g9yW_Zg92-Y?si=r7X57VbUc5g3z5-h)
+
+🔗 Direct link: https://youtu.be/g9yW_Zg92-Y?si=r7X57VbUc5g3z5-h
+
 ## 💻 MicroPython Example Code
 
 ```python
