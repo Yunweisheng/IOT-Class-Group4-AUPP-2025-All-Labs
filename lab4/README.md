@@ -8,19 +8,13 @@ This project demonstrates a complete **IoT data monitoring system** using an **E
 
 **ESP32 → MQTT Broker → Node-RED → InfluxDB → Grafana**
 
-| Component | Purpose |
-|------------|----------|
-| Component | Purpose | Image |
-|------------|----------|-------|
 | Component | Purpose | Image |
 |------------|----------|-------|
 | **ESP32 (MicroPython)** | Sends random sensor data every few seconds | ![ESP32](images/esp32.jpg) |
 | **MQTT (Mosquitto)** | Transfers data between ESP32 and Node-RED | ![MQTT](images/mqtt.png) |
 | **Node-RED** | Processes and forwards data to InfluxDB | ![Node-RED](images/node-red.png) |
 | **InfluxDB** | Stores time-series data from Node-RED | ![InfluxDB](images/influxdb.png) |
-| **Grafana** | Displays real-time charts and analytics | ![Grafana](images/Grafana.png) |
-
-
+| **Grafana** | Displays real-time charts and analytics | ![Grafana](images/grafana.png) |
 
 ---
 
@@ -28,7 +22,7 @@ This project demonstrates a complete **IoT data monitoring system** using an **E
 
 ```mermaid
 graph LR
-A[ESP32] -->|MQTT Publish| B((MQTT Broker))
+A[ESP32] -->|Publishes Data| B((MQTT Broker))
 B --> C[Node-RED Flow]
 C --> D[(InfluxDB Database)]
-D --> E[Grafana Dashboard] here should be added video demo and add photo like grafana influx and node red 
+D --> E[Grafana Dashboard]
