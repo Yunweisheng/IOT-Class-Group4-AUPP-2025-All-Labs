@@ -10,7 +10,7 @@ This project demonstrates a complete **IoT data monitoring system** using an **E
 
 | Component | Purpose | Image |
 |------------|----------|-------|
-| **ESP32 (MicroPython)** | Sends random sensor data every few seconds | ![ESP32](images/Thonny.jpg) |
+| **ESP32 (MicroPython)** | Sends random sensor data every few seconds | ![Thonny](images/Thonny.jpg) |
 | **MQTT (Mosquitto)** | Transfers data between ESP32 and Node-RED | ![MQTT](images/MQTT.png) |
 | **Node-RED** | Processes and forwards data to InfluxDB | ![Node-RED](images/node-red.png) |
 | **InfluxDB** | Stores time-series data from Node-RED | ! |
