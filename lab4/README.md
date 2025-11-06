@@ -26,3 +26,11 @@ A[ESP32] -->|Publishes Data| B((MQTT Broker))
 B --> C[Node-RED Flow]
 C --> D[(InfluxDB Database)]
 D --> E[Grafana Dashboard]
+```
+## 🎥 Video Demonstration
+
+🎬 **Watch the Full Project Demo:**  
+[![Watch Demo](https://img.youtube.com/vi/z0oDA6Mit60/hqdefault.jpg)](https://youtu.be/z0oDA6Mit60)
+
+*(Click the image above to watch the live YouTube demo of the ESP32 → MQTT → Node-RED → InfluxDB → Grafana pipeline.)*
+
