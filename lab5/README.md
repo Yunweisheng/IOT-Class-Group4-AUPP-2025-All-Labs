@@ -52,35 +52,34 @@ This project demonstrates remote control of a DC motor using an Android mobile a
 
 ---
 
-## Demo Videos
+# Demo Videos  
+Click on any video thumbnail below to watch the demo.
 
-### Video 1 – Mobile App DC Motor Control  
-https://youtu.be/wTxYRNPJqnc
+### **Video 1 – Mobile App DC Motor Control**  
+[![Video 1](https://img.youtube.com/vi/wTxYRNPJqnc/0.jpg)](https://youtu.be/wTxYRNPJqnc)
 
-### Video 2 – ESP32 + Grafana Full Demonstration  
-https://youtube.com/watch?feature=shared&v=t5oU7SnD8R8
+---
+
+### **Video 2 – ESP32 + Grafana Full Demonstration**  
+[![Video 2](https://img.youtube.com/vi/t5oU7SnD8R8/0.jpg)](https://youtube.com/watch?v=t5oU7SnD8R8)
 
 ---
 
 ## Wiring Diagram
 
 Place your actual diagram inside:  
-`assets/wiring-diagram.jpg`
+![Wiring Diagram 1](assets/wiring-diagram.jpg)
+![Wiring Diagram 2](assets/wiring-diagram-2.jpg)
 
 
----
-
-## Mobile App UI
-
-Include screenshot here:  
-`assets/app-layout.jpg`
 
 ---
+
+
 
 ## Grafana Dashboard Example
 
-Include screenshot here:  
-`assets/grafana-dashboard.jpg`
+
 
 ---
 
