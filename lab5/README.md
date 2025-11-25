@@ -68,10 +68,13 @@ Click on any video thumbnail below to watch the demo.
 
 
 
+
 ## Wiring Diagram
-![image](image.png)
-![image](image1.png)
-![image](image2.py)
+
+![Diagram 1](images/image.png)
+![Diagram 2](images/image1.png)
+![Diagram 3](images/image2.png)
+
 
 
 
