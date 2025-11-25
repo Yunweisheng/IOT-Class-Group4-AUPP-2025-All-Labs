@@ -79,3 +79,50 @@ Click any thumbnail to watch the demonstration.
 ## Step 2 – Mobile App Setup (MIT App Inventor)
 1. Import the `.aia` file  
 2. Set ESP32 IP address in the app:
+
+
+---
+
+## Step 3 – Grafana Dashboard  
+![Grafana Dashboard](https://github.com/user-attachments/assets/2a2808d8-aa69-49c1-987b-8b1d101fa93e)
+
+---
+
+## Step 4 – Mobile User Interface  
+![MIT App UI](https://github.com/user-attachments/assets/9c9a7746-950c-4012-9064-f78194974410)
+
+---
+
+# 5. Wiring Diagram & Motor Connection
+
+### ESP32 → L298N Motor Driver
+
+GPIO 14 → IN1 (Motor Direction A)
+GPIO 27 → IN2 (Motor Direction B)
+GPIO 26 → ENA (PWM) (Speed Control)
+
+5V → 5V (L298N Logic Power)
+GND → GND (Common Ground)
+
+Motor + → OUT1
+Motor – → OUT2
+
+> **Note:**  
+> The motor requires an external supply (6V–12V).  
+> ESP32 GND and L298N GND must be connected together.
+
+---
+
+### Diagram 1  
+![Diagram 1](images/image.png)
+
+### Diagram 2  
+![Diagram 2](images/image1.png)
+
+### Diagram 3  
+![Diagram 3](images/image2.png)
+
+---
+
+
+
