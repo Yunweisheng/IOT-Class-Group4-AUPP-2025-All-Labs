@@ -1,78 +1,127 @@
-# LAB 5 – Mobile App DC Motor Control with Grafana
+LAB 5 – Mobile App DC Motor Control with Grafana
 
-Control a DC motor remotely using an Android app (MIT App Inventor) and an ESP32 web server, while logging all actions to InfluxDB and visualizing them in Grafana.
+This project demonstrates remote control of a DC motor using an Android mobile application (MIT App Inventor) and an ESP32 web server. All motor actions are logged into InfluxDB and visualized on a Grafana dashboard.
 
----
+Features
+Mobile App Control
 
-## Features
+Forward / Backward / Stop buttons
 
-- 📱 **Mobile app control**
-  - Forward / Backward / Stop buttons
-  - Speed slider (0–100%)
-- 🔌 **ESP32 + L298N motor driver**
-  - HTTP endpoints for motor control
-  - PWM speed control
-- 📡 **IoT data logging**
-  - Logs commands and speed to InfluxDB
-- 📊 **Grafana dashboard**
-  - Real-time motor speed graph
-  - Last command & event table
+Speed slider (0–100%)
 
----
+ESP32 + L298N Motor Driver
 
-## Tech Stack
+HTTP endpoints for motor commands
 
-- **Hardware:** ESP32, L298N, DC motor, external power supply  
-- **Firmware:** MicroPython (`main.py`)  
-- **App:** MIT App Inventor (`.aia` project)  
-- **Backend:** InfluxDB (via HTTP / Node-RED or similar)  
-- **Dashboard:** Grafana
+PWM-based speed control
 
----
+Accessible from MIT App and web browser
 
-## Quick Start
+IoT Data Logging
 
-1. **ESP32**
-   - Flash MicroPython and upload `main.py`
-   - Set your Wi-Fi SSID/password and server URLs inside the code
-2. **Mobile App**
-   - Import the `.aia` file into MIT App Inventor
-   - Set base URL to `http://<ESP32_IP>/`
-   - Build and install the APK on your Android phone
-3. **Data Logging & Dashboard**
-   - Configure your HTTP endpoint → InfluxDB
-   - Open Grafana and connect it to InfluxDB
-   - Import/create panels for:
-     - Motor speed vs time
-     - Last command
-     - Event table
+Logs direction, speed, and timestamp to InfluxDB
 
----
+Supports HTTP posting via Node-RED or direct API
 
-## Project Structure
+Grafana Dashboard
 
-```text
+Real-time speed graph
+
+Command/event table
+
+Last motor action widget
+
+Tech Stack
+
+Hardware: ESP32, L298N motor driver, DC motor, external power supply
+
+Firmware: MicroPython (main.py)
+
+Mobile App: MIT App Inventor (.aia file)
+
+Backend: InfluxDB (via HTTP API / Node-RED)
+
+Dashboard: Grafana
+
+Quick Start
+1. ESP32 Setup
+
+Flash MicroPython firmware
+
+Upload main.py
+
+Update inside the code:
+
+Wi-Fi SSID & password
+
+InfluxDB/Node-RED HTTP endpoint
+
+Motor control pins
+
+2. Mobile App Setup
+
+Import the .aia file into MIT App Inventor
+
+Update the ESP32 URL:
+
+http://<ESP32_IP>/
+
+
+Build and install the APK on your Android device
+
+3. Data Logging & Dashboard
+
+Configure the HTTP receiver → InfluxDB
+
+Create a database and measurement for logging
+
+Create Grafana panels:
+
+Motor Speed vs Time
+
+Command History Table
+
+Event Logs
+
+Project Structure
 .
-├── main.py                     # ESP32 MicroPython code
+├── main.py                     # ESP32 MicroPython firmware
 ├── app/
 │   └── dc_motor_controller.aia # MIT App Inventor project
-├── assets/                     # Images / screenshots
+├── assets/                     # Diagrams, screenshots, images
 │   ├── wiring-diagram.jpg
 │   ├── app-layout.jpg
 │   ├── grafana-dashboard.jpg
 │   └── demo-thumbnail.jpg
 └── README.md
 
-[Demo Video – Mobile DC Motor Control](https://your-demo-video-link-here)
+Demo Videos
+Video 1 – Mobile App DC Motor Control
 
-[![Demo Video](assets/demo-thumbnail.jpg)](https://your-demo-video-link-here)
+https://youtu.be/wTxYRNPJqnc
 
+Video 2 – ESP32 + Grafana Full Demonstration
 
-### Wiring & Setup
-![Wiring Diagram](assets/wiring-diagram.jpg)
+https://youtube.com/watch?feature=shared&v=t5oU7SnD8R8
 
-### Mobile App UI
-![Mobile App Layout](assets/app-layout.jpg)
+Wiring Diagram
 
-### Grafana Dashboard
-![Grafana Dashboard](assets/grafana-dashboard.jpg)
+(Place your actual diagram inside assets/wiring-diagram.jpg)
+
+ESP32 → L298N
+---------------------
+GPIO 14  → IN1
+GPIO 27  → IN2
+GPIO 26  → ENA (PWM)
+5V       → 5V
+GND      → GND
+Motor +  → OUT1
+Motor –  → OUT2
+
+Mobile App UI
+
+Include screenshot: assets/app-layout.jpg
+
+Grafana Dashboard Example
+
+Include screenshot: assets/grafana-dashboard.jpg
