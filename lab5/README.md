@@ -36,7 +36,20 @@ This project demonstrates remote control of a DC motor using an Android mobile a
 
 ---
 
-## Quick Start
+# Demo Videos  
+Click on any video thumbnail below to watch the demo.
+
+### **Video 1 – Mobile App DC Motor Control**  
+[![Video 1](https://img.youtube.com/vi/wTxYRNPJqnc/0.jpg)](https://youtu.be/wTxYRNPJqnc)
+
+---
+
+### **Video 2 – ESP32 + Grafana Full Demonstration**  
+[![Video 2](https://img.youtube.com/vi/t5oU7SnD8R8/0.jpg)](https://youtube.com/watch?v=t5oU7SnD8R8)
+
+---
+
+## Quick Start Guide
 
 ### 1. ESP32 Setup
 1. Flash MicroPython firmware  
@@ -51,41 +64,16 @@ This project demonstrates remote control of a DC motor using an Android mobile a
 2. Set the ESP32 base URL:
 
 ---
+## Grafana Dashboard Example  
 
-# Demo Videos  
-Click on any video thumbnail below to watch the demo.
 
-### **Video 1 – Mobile App DC Motor Control**  
-[![Video 1](https://img.youtube.com/vi/wTxYRNPJqnc/0.jpg)](https://youtu.be/wTxYRNPJqnc)
-
----
-
-### **Video 2 – ESP32 + Grafana Full Demonstration**  
-[![Video 2](https://img.youtube.com/vi/t5oU7SnD8R8/0.jpg)](https://youtube.com/watch?v=t5oU7SnD8R8)
-
----
 
 ## Wiring Diagram
-
-Place your actual diagram inside:  
-![Wiring Diagram 1](assets/wiring-diagram.jpg)
-![Wiring Diagram 2](assets/wiring-diagram-2.jpg)
-
-
-
----
+![image](image.png)
+![image](image1.png)
+![image](image2.py)
 
 
 
-## Grafana Dashboard Example
-
-
-
----
-
-## License
-
-This project is created for educational use as part of LAB 5.  
-You are free to modify and extend it for learning purposes.
 
 
